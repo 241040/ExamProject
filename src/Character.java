@@ -1,4 +1,4 @@
-public abstract class Character implements Creature{
+public abstract class Character implements Creature {
     private String name;
     private int hp;
 
@@ -12,5 +12,16 @@ public abstract class Character implements Creature{
     public void showStats() {
         System.out.println(this.name + " : HP " + this.hp);
     }
-
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getHp() {
+        return hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 }
