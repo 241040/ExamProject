@@ -14,6 +14,12 @@ public abstract class Monster implements Creature {
     public final boolean isAlive() {
         return hp > 0;
     }
+
+    @Override
+    public void showStats() {
+        System.out.println(getName() + getSuffix() + " : HP " + getHp());
+    }
+
     public String getName() {
         return name;
     }
