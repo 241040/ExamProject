@@ -1,7 +1,7 @@
 public interface Creature {
     boolean isAlive();
 
-    void showStats();
+    void showStatus();
 
     void attack(Creature target);
 

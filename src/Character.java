@@ -9,7 +9,7 @@ public abstract class Character implements Creature {
     final public boolean isAlive(){
         return hp > 0;
     }
-    public void showStats() {
+    public void showStatus() {
         System.out.println(this.name + " : HP " + this.hp);
     }
     public String getName() {

@@ -11,31 +11,31 @@ public abstract class Monster implements Creature {
             throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした。");
         }
     }
-    public final boolean isAlive() {
-        return hp > 0;
-    }
-
     @Override
-    public void showStats() {
-        System.out.println(getName() + getSuffix() + " : HP " + getHp());
+    public final boolean isAlive() {
+        return this.getHp() > 0;
     }
-
+    @Override
+    public void showStatus() {
+        System.out.println(this.getName() + this.getSuffix() + "：HP " + this.getHp());
+    }
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Override
     public int getHp() {
-        return hp;
+        return this.hp;
     }
+    @Override
     public void setHp(int hp) {
-        this.hp = hp;
+        if (hp < 0) {
+            this.hp = 0;
+        } else {
+            this.hp = hp;
+        }
     }
     public char getSuffix() {
-        return suffix;
-    }
-    public void setSuffix(char suffix) {
-        this.suffix = suffix;
+        return this.suffix;
     }
 }
