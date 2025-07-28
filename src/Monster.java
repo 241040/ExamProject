@@ -8,7 +8,7 @@ public abstract class Monster implements Creature {
             throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした。");
         }
         this.name = name;
-        this.hp = hp;
+        setHp(hp);
         this.suffix = suffix;
     }
     @Override
