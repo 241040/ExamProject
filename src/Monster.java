@@ -10,7 +10,6 @@ public abstract class Monster implements Creature {
         this.name = name;
         this.hp = hp;
         this.suffix = suffix;
-
     }
     @Override
     public final boolean isAlive() {
@@ -30,10 +29,10 @@ public abstract class Monster implements Creature {
     }
     @Override
     public void setHp(int hp) {
-        if (hp < 0) {
-            this.hp = 0;
-        } else {
+        if(hp > 0){
             this.hp = hp;
+        }else{
+            this.hp = 0;
         }
     }
     public char getSuffix() {

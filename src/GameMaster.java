@@ -12,11 +12,10 @@ public class GameMaster {
         ArrayList<Monster> monsters = new ArrayList<Monster>();
         Goblin g = new Goblin('A',50);
         Matango m = new Matango('A',45);
-        Slime s = new Slime('A',40);
+        Slime s = new Slime('A',-40);
         monsters.add(g);
         monsters.add(m);
         monsters.add(s);
-
         System.out.println("---味方パーティ---");
         for (Character character : party) {
             character.showStatus();
